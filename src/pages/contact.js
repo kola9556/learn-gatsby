@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation/Navigation';
 
-const IndexPage = () => <Navigation />;
+const ContactPage = () => <Navigation />;
 
-export default IndexPage;
+export default ContactPage;
