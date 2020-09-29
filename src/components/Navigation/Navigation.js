@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 const NavigationWrapper = styled.nav`
   position: absolute;
-  top: 20px;
+  top: 35px;
   left: 30px;
   display: flex;
   align-items: center;
