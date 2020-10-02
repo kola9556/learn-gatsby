@@ -8,6 +8,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-layout`,
+
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
@@ -39,6 +40,7 @@ module.exports = {
         display: `minimal-ui`,
       },
     },
+    `gatsby-plugin-mdx`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
