@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
 import Navigation from '../components/Navigation/Navigation';
 import Button from '../components/Button/Button';
-import Post from '../components/Post/Post';
 
 const ContentWrapper = styled.div`
   width: 55%;
@@ -43,7 +42,6 @@ const StyledImage = styled(Image)`
 const IndexPage = ({ data }) => (
   <>
     <ContentWrapper>
-      <Post />
       <StyledHeader>Your new space</StyledHeader>
       <StyledParagraph>
         While artists work from real to the abstract, architects must work from the abstract to the

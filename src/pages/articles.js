@@ -1,10 +1,69 @@
 import React from 'react';
-import Navigation from '../components/Navigation/Navigation';
+import styled from 'styled-components';
+import { graphql } from 'gatsby';
+import ArticlePreview from '../components/ArticlePreview/ArticlePreview';
+import PageInfo from '../components/PageInfo/PageInfo';
 
-const ArticlesPage = () => (
-  <>
-    <h1>Arcticles Page</h1>
-  </>
-);
+const ArticlesWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  margin-bottom: 20px;
+`;
+
+const pageData = {
+  title: 'articles',
+  paragraph: `While artists work from real to the abstract, architects must work from the abstract to the real.`,
+};
+
+const ArticlesPage = ({ data }) => {
+  const {
+    allMdx: { nodes },
+  } = data;
+
+  return (
+    <>
+      <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
+      <ArticlesWrapper>
+        {nodes.map(({ excerpt, frontmatter: { title, slug, featuredImage } }) => (
+          <ArticlePreview
+            key={slug}
+            title={title}
+            excerpt={excerpt}
+            image={featuredImage.childImageSharp.fluid}
+            path={slug}
+          />
+        ))}
+      </ArticlesWrapper>
+    </>
+  );
+};
+
+export const query = graphql`
+  {
+    allMdx {
+      nodes {
+        frontmatter {
+          title
+          slug
+          author
+          featuredImage {
+            childImageSharp {
+              fluid(
+                maxWidth: 500
+                maxHeight: 350
+                traceSVG: { background: "#fff", color: "#663399" }
+                quality: 90
+              ) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+        excerpt(pruneLength: 50)
+      }
+    }
+  }
+`;
 
 export default ArticlesPage;
