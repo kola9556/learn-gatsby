@@ -9,7 +9,6 @@ const NavigationWrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-items: flex-start;
-  font-family: 'Montserrat';
 
   a {
     text-decoration: none;

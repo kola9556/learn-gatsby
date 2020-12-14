@@ -12,14 +12,9 @@ module.exports = {
     `gatsby-plugin-layout`,
 
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: [
-          {
-            family: `Montserrat`,
-            variants: [`400`, `600`, `700`, `800`],
-          },
-        ],
+        fonts: ['Ubuntu'],
       },
     },
     {
@@ -47,6 +42,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
+        icon: `src/assets/images/hero.jpg`,
       },
     },
     `gatsby-plugin-mdx`,

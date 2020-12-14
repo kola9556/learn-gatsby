@@ -14,13 +14,13 @@ const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
         padding: 95px 85px 0 ;
-        font-family: 'Montserrat';
+        font-family: 'Ubuntu';
     }
 
     button {
         padding: 0;
         cursor: pointer;
-        font-family: 'Montserrat';
+        font-family: 'Ubuntu';
     }
 
     ul {

@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
 import { graphql } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 const PostWrapper = styled.div`
   display: flex;
